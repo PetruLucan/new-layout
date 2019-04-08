@@ -13,25 +13,44 @@ body {
 .content {
     background: gray;
     border: 1px solid black;
-    flex: 1;
     margin: 5px;
 }
 
-.header {
-    flex-grow: 2;
+header {
+    flex-grow: 3;
 }
 
 #mainContent {
     display: flex;
-    align-items: stretch;
-    flex-grow: 7;
+    flex-grow: 12;
+}
+
+.tabletWrapper {
+    display: flex;
+    flex-grow: 6;
 }
 
 .aboutMe,
 .experience {
-    flex: 2;
+    flex-grow: 1;
 }
 
 .skills {
-    flex: 1;
+    flex-grow: 1;
+}
+
+footer {
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    section div.tabletWrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px) {
+    #mainContent {
+        flex-direction: column;
+    }
 }
