@@ -17,10 +17,19 @@ body {
 }
 
 header {
-    flex-grow: 3;
+    text-align: center;
+    flex-grow: 1;
 }
 
-#mainContent {
+h2 {
+    margin-bottom: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+#mainSection {
     display: flex;
     flex-grow: 12;
 }
@@ -30,13 +39,38 @@ header {
     flex-grow: 6;
 }
 
-.aboutMe,
-.experience {
-    flex-grow: 1;
+section p {
+    margin: 0;
 }
 
-.skills {
-    flex-grow: 1;
+.aboutMeSubsection,
+.experienceSubsection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.job {
+    flex-basis: 30%;
+}
+
+.jobDescription {
+    flex-basis: 70%;
+}
+
+section.experienceSubsection div p {
+    margin: 0;
+}
+
+aside {
+    display: flex;
+}
+
+aside ul {
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    padding: 20px;
+    justify-content: space-around;
 }
 
 footer {
@@ -49,8 +83,8 @@ footer {
     }
 }
 
-@media (max-width: 320px) {
-    #mainContent {
+@media (max-width: 450px) {
+    #mainSection {
         flex-direction: column;
     }
 }
